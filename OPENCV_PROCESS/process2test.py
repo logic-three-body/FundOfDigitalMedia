@@ -1,6 +1,7 @@
 import cv2
 print(cv2.__file__)
-cap = cv2.VideoCapture(0)#注意如果为1imshow会崩溃
+impath='D:\Anaconda3\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml'
+cap = cv2.CascadeClassifier(impath)
 while True:
     ret, im = cap.read()
     cv2.imshow('video test', im)
